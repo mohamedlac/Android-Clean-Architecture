@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.View.HomeActivity"
+    android:background="@color/BackgroudColor"
+    android:fillViewport="false">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/popular_section"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pop_title_wrapper">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/popular_title_section"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="25dp"
+                    android:textColor="#fff"
+                    android:text="Popular Downloads"
+                    android:textSize="23dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:drawableLeft="@drawable/ic_star_popular_section"
+                    android:drawablePadding="6dp"/>
+
+        </RelativeLayout>
+                <android.support.v7.widget.RecyclerView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:id="@+id/popular_movie_list"
+                    android:orientation="horizontal">
+                </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/latest_section"
+            android:layout_below="@id/popular_section"
+            android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:id="@+id/latest_title_wrapper">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/latest_title_section"
+                           android:gravity="center_vertical"
+                            android:textColor="#fff"
+                            android:text="Latest Movies "
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="15dp"/>
+
+                        <Button
+                            android:gravity="center"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/browse_latest_btn"
+                            android:layout_alignParentRight="true"
+                            android:text="Browse All"
+                            android:textSize="19dp"
+                            android:textStyle="normal"
+                            android:textColor="#555"
+                            android:background="@android:color/transparent"
+                            android:textAllCaps="false"/>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:id="@+id/latest_movie_list"
+
+                    android:orientation="horizontal">
+                </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+</RelativeLayout>
+
+</ScrollView>
+
+</RelativeLayout>
+
+
+
